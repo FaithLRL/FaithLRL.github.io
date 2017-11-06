@@ -6,8 +6,8 @@
 # Site
 title: Shixiang's Personal Site
 subtitle:
-description: 逢君一笑，人间无此欢喜
-author: 诗翔
+description: 素衣天涯，渡你青衣韶华。
+author: LRL
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
@@ -214,8 +214,8 @@ font:
 #social:
   #LinkLabel: Link
 social:
-    GitHub: https://github.com/ShixiangWang
-    简书: http://www.jianshu.com/u/b6608e27dc74
+    GitHub: https://github.com/FaithLRL
+    码云: https://gitee.com/lrl9051/events
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
