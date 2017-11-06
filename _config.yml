@@ -228,12 +228,13 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-  简书: etsy
+  码云: etsy
+
 
   
 # reward
 reward_comment: 人该是自己生活的主宰，而不是别人手里的行货
-alipay: /images/reward_image/alipay-reward-image.jpg
+#alipay: /images/reward_image/alipay-reward-image.jpg
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
 #avatar:
@@ -291,10 +292,13 @@ sidebar:
   #Title: http://example.com/
 links_title: 推荐阅读
 links:
-  阮一峰的网络日志: http://www.ruanyifeng.com/blog/archives.html
-  R的极客理想系列: http://blog.fens.me/series-r/
-  谢益辉: https://yihui.name/
-  解螺旋的矿工: http://www.huangshujia.me/
+  我的知乎: https://www.zhihu.com/people/databoy/activities
+
+#  阮一峰的网络日志: http://www.ruanyifeng.com/blog/archives.html
+#  R的极客理想系列: http://blog.fens.me/series-r/
+#  谢益辉: https://yihui.name/
+#  解螺旋的矿工: http://www.huangshujia.me/
+
 
 
 # ---------------------------------------------------------------
