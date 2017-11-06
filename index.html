@@ -1,100 +1,79 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
-</head>
+---
+layout: default
+title: "首页：Home"
+---
+<!-- 
+<h1 class="page-header">
+  <small>
+    {{ site.description }}
+  </small>
+</h1>
+-->
+<!-- Loop output paged posts -->
+<div id="index" class="row">
+    <div class="post-area">
+     	 <div class="post-list-body">
+        <div post-cate="All">
+        <ul class="posts">
+	{% for post in paginator.posts %}
+	<li>	
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<span class="date">{{ post.date | date_to_string }}</span>
+	
+	<hr>
+	<p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
+		<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
+	<hr>
+	</li>
+	{% endfor %}
+	</ul>
+	<!-- Pager indicator -->
+	<ul class="pager">
+	  {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
+	  <li class="previous">
+	    <a href="{{ site.url }}/">
+	      &larr; Older
+	    </a>
+	  </li>
+	  {% else %}
+	  <li class="previous">
+	    <a href="{{ site.url }}/page{{ paginator.previous_page }}">
+	      &larr; Older
+	    </a>
+	  </li>
+	  {% endif %} {% endif %} {% if paginator.next_page %}
+	  <li class="next">
+	    <a href="{{ site.url }}/page{{ paginator.next_page }}">
+	      Newer &rarr;
+	    </a>
+	  </li>
+	  {% endif %}
+	</ul>
+	</div>
+	
 
-<body>
-<div class="vi">
-    <div class="sidebar">
-        <div class="header">
-            <h1>LRL</h1>
-            <div class="quote">
-                <p class="quote-text animate-init letter">
-                    <a>少年，你可有剑？</a><br>
-                    <a>有。</a><br>
-                    <a>可否与我一看？</a><br>
-                    <a>还在磨！</a><br>
-                    <a>开锋之日能有何作为？</a><br>
-                    <a>可刺苍穹...</a><br>
-                </p>
-                <p class="quote-author animate-init">—— <strong>XXX</strong></p>
-            </div>
-        </div>
-        <div class="menu">
-            <a href="https://github.com/FaithLRL" class="animate-init">GitHub</a>
-            <a href="https://gitee.com/lrl9051/events" class="animate-init">码云</a>
-            <a href="https://LRLBlog.github.io" class="animate-init">博客</a>
-            <a href="https://www.zhihu.com/people/databoy/activities" class="animate-init">知乎</a>
-            <p>
-                <a href="http://dudu.zhihu.com/circle/257517" class="animate-init">
-                    奥义。复制粘贴加调试
-                </a>
-            </p>
-        </div>
-        <div class="location">
-            <i class="location-icon"></i>
-            <span class="location-text animate-init">Zhejiang - China</span>
-        </div>
-        <div class="relocating">
-            Navigating to: <span class="relocate-location"></span>...
-        </div>
-    </div>
+	 
+       {% for category in site.categories %}
+	<div post-cate="{{category | first}}">
 
-    <div class="content">
-        <span class="close">close</span>
-    </div>
+          <ul class="posts">
+            {% for posts in category  %}
+              {% for post in posts %}
+                {% if post.url %}
+		<li>
+                  <a href="{{ post.url }}" class="post-list-item">
+                    <h2>{{ post.title }}</h2>
+                    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </a>
+		</li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+	</div>
+        {% endfor %}
+	
+	 </div>
+
 </div>
-<script type="text/javascript" src="assets/vendors/jquery/index.js"></script>
-<script>
-    $(document).ready(function () {
-        var delay = 1;
-        var DELAY_STEP = 200;
-        var animationOptions = { opacity: 1, top: 0};
-
-        $('h1').animate(animationOptions).promise()
-                .pipe(animateMain)
-                .pipe(animateLocationIcon);
-
-        function animateMain() {
-            var dfd = $.Deferred();
-            var els = $('.animate-init');
-            var size = els.size();
-
-            els.each(function (index, el) {
-                delay++;
-                $(el).delay(index * DELAY_STEP)
-                        .animate(animationOptions);
-                (size - 1 === index) && dfd.resolve();
-            });
-            return dfd.promise();
-        }
-
-        function animateLocationIcon() {
-            $('.location-icon').delay(delay * DELAY_STEP).animate({
-                opacity: 1,
-                top: 0
-            }).promise().done(animationQuote);
-        }
-
-        function animationQuote() {}
-
-        $(document.body).on('keydown', function (event) {
-            // Press 'b' key
-            if (event.which === 66) {
-                $('.relocate-location').text('Bookmark Page');
-                $('.relocating').css('opacity', 1);
-
-                window.setTimeout(function () {
-                    window.location.href = '/bookmarks.html';
-                }, 1000);
-            }
-        });
-    });
-</script>
-</body>
-</html>
+</div>
