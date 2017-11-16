@@ -238,7 +238,7 @@ reward_comment: 人该是自己生活的主宰，而不是别人手里的行货
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
 #avatar:
-#avatar: /images/avatar.jpg
+avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
