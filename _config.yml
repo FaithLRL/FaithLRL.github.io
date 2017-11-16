@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 
 # Site
-title: 上善若水
+title: 浮生若梦
 subtitle:
 description: 素衣天涯，渡你青衣韶华。
 author: LRL
@@ -238,7 +238,7 @@ reward_comment: 人该是自己生活的主宰，而不是别人手里的行货
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
 #avatar:
-avatar: /images/avatar.jpg
+#avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -293,11 +293,10 @@ sidebar:
 links_title: 推荐阅读
 links:
   我的知乎: https://www.zhihu.com/people/databoy/activities
-
-#  阮一峰的网络日志: http://www.ruanyifeng.com/blog/archives.html
-#  R的极客理想系列: http://blog.fens.me/series-r/
-#  谢益辉: https://yihui.name/
-#  解螺旋的矿工: http://www.huangshujia.me/
+  阮一峰的网络日志: http://www.ruanyifeng.com/blog/archives.html
+  R的极客理想系列: http://blog.fens.me/series-r/
+  谢益辉: https://yihui.name/
+  解螺旋的矿工: http://www.huangshujia.me/
 
 
 

@@ -5,8 +5,8 @@ header: About Me
 group: navigation
 ---
 
- * **Name:**  王诗翔
+ * **Name:**  吕荣领
  
- * **Email:** [w_shixiang@163.com](mailto:w_shixiang@163.com)
+ * **Email:** [lrl9520@163.com](mailto:w_shixiang@163.com)
  
- * **Github:** [ShixiangWang](https://github.com/ShixiangWang)
+ * **Github:** [FaithLRL](https://github.com/FaithLRL)
