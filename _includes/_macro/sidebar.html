@@ -112,9 +112,9 @@
         {% assign cc = 'by, by-nc, by-nc-nd, by-nc-sa, by-nd, by-sa, zero' | split: ', ' %}
         {% if cc contains site.creative_commons %}
           <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/{% if site.creative_commons == 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ site.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank">
-              <img src="{{ site.images | relative_url }}/cc-{{ site.creative_commons }}.svg" alt="Creative Commons" />
-            </a>
+            <!--<a href="https://creativecommons.org/{% if site.creative_commons == 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ site.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank">-->
+              <!--<img src="{{ site.images | relative_url }}/cc-{{ site.creative_commons }}.svg" alt="Creative Commons" />-->
+            <!--</a>-->
           </div>
         {% endif %}
 
