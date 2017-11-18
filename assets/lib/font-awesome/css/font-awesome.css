@@ -826,9 +826,9 @@
 .fa-bolt:before {
   content: "\f0e7";
 }
-.fa-sitemap:before {
-  content: "\f0e8";
-}
+/*.fa-sitemap:before {*/
+  /*content: "\f0e8";*/
+/*}*/
 .fa-umbrella:before {
   content: "\f0e9";
 }
@@ -1741,9 +1741,9 @@
 .fa-street-view:before {
   content: "\f21d";
 }
-.fa-heartbeat:before {
-  content: "\f21e";
-}
+/*.fa-heartbeat:before {*/
+  /*content: "\f21e";*/
+/*}*/
 .fa-venus:before {
   content: "\f221";
 }
