@@ -1741,9 +1741,9 @@
 .fa-street-view:before {
   content: "\f21d";
 }
-/*.fa-heartbeat:before {*/
-  /*content: "\f21e";*/
-/*}*/
+.fa-heartbeat:before {
+  content: "\f21e";
+}
 .fa-venus:before {
   content: "\f221";
 }
